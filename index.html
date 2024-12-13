@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube-like Skip Ad</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="video-container">
+    <video id="video" width="800" height="450" controls>
+      <source src="water.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <button id="skipButton" class="skip-button">Skip Ad</button>
+  </div>
+
+  <script>
+    const video = document.getElementById('video');
+    const skipButton = document.getElementById('skipButton');
+  
+    const showSkipButtonAfter = 2000; 
+  
+    function showSkipButton() {
+      console.log("Showing skip button");
+      skipButton.style.display = 'block'; 
+    }
+  
+    function skipAd() {
+      video.currentTime = video.duration; 
+      skipButton.style.display = 'none'; 
+      console.log("Ad skipped");
+    }
+  
+    video.addEventListener('play', () => {
+      console.log("Video started playing");
+      setTimeout(showSkipButton, showSkipButtonAfter); 
+    });
+  
+    skipButton.addEventListener('click', skipAd);
+
+  </script>
+</body>
+</html>

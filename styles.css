@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+    margin: 0;
+  }
+  
+  .video-container {
+    position: relative;
+    max-width: 800px;
+  }
+  
+  #video {
+    width: 100%;
+  }
+  
+  .skip-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f44336;
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    z-index: 10;
+    border-radius: 5px;
+  }
+  
+  .skip-button:hover {
+    background-color: #d32f2f;
+  }
+  
